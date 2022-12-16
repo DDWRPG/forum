@@ -1,0 +1,100 @@
+:root {
+  --usercolor: #FF5959;
+}
+
+* {
+  transition: all 0.16s ease;
+}
+
+*, :before, :after {
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  direction: ltr;
+  font-family: Open Sans, Arial, sans-serif;
+  font-size: 10px;
+  word-break: break-word;
+}
+
+header {
+  background-color: #393939;
+  color: #fff;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: keep-all;
+  z-index: 10000;
+}
+header a:visited {
+  color: #fff;
+}
+
+#main-menu-btn, #logo, #logo-text, header.button, #header-user, #header-notif, #search-main, #header-navigation {
+  display: block;
+  float: left;
+  height: 80px;
+}
+
+#header-user, #header-notif, #search-main {
+  float: right;
+}
+
+#main-menu-btn, #logo, #header-notif {
+  display: flex;
+  width: 80px;
+}
+#main-menu-btn .material-icons, #logo .material-icons, #header-notif .material-icons {
+  margin: auto;
+  font-size: 35px;
+}
+
+#header-user {
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+#header-user img {
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 1px solid var(--usercolor);
+  margin-left: 20px;
+  float: right;
+}
+#header-user span {
+  font-size: 20px;
+  line-height: 20px;
+  position: relative;
+  top: 17px;
+}
+
+#main-menu-btn:hover, #logo:hover, #header-user:hover, #header-notif:hover {
+  cursor: pointer;
+  background-color: #232323;
+}
+
+@media (min-width: 961px) {
+  header {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+}
